@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Kasif Quamar | Data Analyst Portfolio</title>
+    <meta name="description" content="Personal portfolio of Kasif Quamar, a skilled Data Analyst specializing in SQL, Power BI, and Python. Explore my projects, experience, and skills." />
+    <meta name="keywords" content="Data Analyst, Kasif Quamar, Portfolio, SQL, Power BI, Python, Data Visualization, Business Intelligence, Data Science" />
+    <meta name="author" content="Kasif Quamar" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kasif Quamar | Data Analyst Portfolio" />
+    <meta property="og:description" content="A personal portfolio website for Kasif Quamar, a Data Analyst." />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* For scroll-in animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      @keyframes tilt {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(-1.5deg); }
+        75% { transform: rotate(1.5deg); }
+      }
+      .animate-tilt {
+        animation: tilt 10s infinite linear;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-slate-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
