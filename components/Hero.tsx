@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
     <section id="home" className="min-h-screen flex items-center">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4 text-center md:text-left">
-          <p className="text-sky-400 text-lg">Hi, my name is</p>
+          <p className="text-sky-400 text-lg">Hii, my name is</p>
           <h1 className="text-5xl md:text-7xl font-extrabold text-slate-100 tracking-tight">Kasif Quamar.</h1>
           <h2 className="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">I build insights from data.</h2>
           <p className="max-w-xl text-slate-400 leading-relaxed mx-auto md:mx-0">
