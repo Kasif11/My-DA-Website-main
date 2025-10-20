@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-const aboutImage = '/assets/AboutImg.jpg';
+const AboutImg = '/assets/AboutImg.jpg';
 
 const About: React.FC = () => {
   const sectionRef = useScrollAnimation<HTMLElement>();
@@ -27,7 +27,7 @@ const About: React.FC = () => {
           <div className="relative w-52 h-52 md:w-64 md:h-64">
             <div className="absolute -inset-1.5 bg-gradient-to-r from-sky-500 to-cyan-400 rounded-lg blur-lg opacity-75 animate-tilt"></div>
             <img
-              src={aboutImage}
+              src={AboutImg}
               alt="Kasif Quamar"
               className="relative w-full h-full object-cover rounded-lg border-2 border-slate-800 shadow-xl"
             />
