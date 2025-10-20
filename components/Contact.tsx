@@ -31,7 +31,11 @@ const Contact: React.FC = () => {
             </a>
         </div>
       <footer className="mt-20 text-slate-500 text-sm">
-        <p>Built with React & Tailwind CSS by Kasif Quamar</p>
+        <p>
+          Made with <span aria-hidden="true">❤️</span> by Kasif Quamar.
+          <br />
+          © {new Date().getFullYear()} | All rights reserved.
+        </p>
         <p>(+91) 9905034309</p>
       </footer>
     </section>
