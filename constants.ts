@@ -9,10 +9,10 @@ export const SKILLS: Skill[] = [
   { name: 'Data Cleaning' },
   { name: 'Data Modelling' },
   { name: 'Data Storytelling' },
-  { name: 'SQL' },
   { name: 'DAX' },
-  { name: 'Pivot Tables' },
-  { name: 'Vlookup' },
+  { name: 'HTML' },
+  { name: 'CSS' },
+  { name: 'Tailwind CSS' },
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
