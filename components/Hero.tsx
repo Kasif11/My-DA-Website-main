@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
               <a
                 href="/assets/Kasif Quamar DA Resume.pdf"
                 download
-                aria-label="Download Resume"
+                aria-label="Resume"
                 className="ml-0 sm:ml-2 w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-sky-500 to-violet-600 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-200 group focus:outline-none focus:ring-4 focus:ring-sky-400/30"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0 transform transition-transform duration-200 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
