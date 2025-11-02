@@ -1,11 +1,7 @@
 
 import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-<<<<<<< HEAD
 import AboutImg from '../assets/AboutImg.jpg';
-=======
-const AboutImg = '../assets/AboutImg.jpg';
->>>>>>> 6ffbeff317783103dda5279edb8db95d4da8113b
 
 const About: React.FC = () => {
   const sectionRef = useScrollAnimation<HTMLElement>();
