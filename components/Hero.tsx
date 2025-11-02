@@ -76,7 +76,11 @@ const Hero: React.FC = () => {
 
               {/* Download resume button (responsive: icon-only on xs, full label on sm+) */}
               <a
+<<<<<<< HEAD
                 href="/assets/My_DA_Resume.pdf"
+=======
+                href="/assets/Kasif Quamar DA Resume.pdf"
+>>>>>>> 6ffbeff317783103dda5279edb8db95d4da8113b
                 download
                 aria-label="Resume"
                 className="ml-0 sm:ml-2 w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-sky-500 to-violet-600 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-200 group focus:outline-none focus:ring-4 focus:ring-sky-400/30"
