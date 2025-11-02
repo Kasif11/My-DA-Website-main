@@ -39,7 +39,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-6 md:px-12 lg:px-20 py-4">
-        <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="text-2xl font-bold text-sky-400 cursor-pointer">KQ</a>
+        <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="text-3xl font-extrabold text-sky-400 cursor-pointer">KQ</a>
         <nav className="hidden md:flex space-x-6">
           {navLinks.map((link) => (
             <a

@@ -3,7 +3,7 @@ import { GithubIcon } from './icons/GithubIcon';
 import { LinkedInIcon } from './icons/LinkedInIcon';
 import { MailIcon } from './icons/MailIcon';
 // @ts-ignore: static asset import without type declarations
-import profileImage from '../assets/myImage.jpg';
+import myImage from '../assets/myImage.jpg';
 
 // typing animation component
 const TypingName: React.FC<{ texts?: string[] }> = ({ texts = ['Kasif Quamar.'] }) => {
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
 
           <h2 className="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">I build insights from data.</h2>
           <p className="max-w-xl text-slate-400 leading-relaxed mx-auto md:mx-0">
-            I'm a Data Analyst specializing in creating impactful dashboards and uncovering stories within data. My expertise lies in SQL, Power BI, and Python to drive business decisions.
+            I'm a Data Analyst specializing in creating impactful dashboards and uncovering stories within data. My expertise lies in Excel, SQL, Power BI, and Python to drive business decisions.
           </p>
           <div className="flex items-center justify-center md:justify-start space-x-6 pt-4">
               <a href="https://github.com/Kasif11" target="_blank" rel="noopener noreferrer" aria-label="Github" className="text-slate-400 hover:text-sky-400 transition-colors duration-300 transform hover:scale-110">
@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80">
                 <div className="absolute inset-0 bg-sky-400/30 rounded-full blur-2xl animate-pulse-slow"></div>
                 <img 
-                    src={profileImage}
+                    src={myImage}
                     alt="Kasif Quamar" 
                     className="relative w-full h-full object-cover rounded-full border-4 border-slate-700 shadow-2xl"
                 />
