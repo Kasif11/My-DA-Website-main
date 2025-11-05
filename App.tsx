@@ -1,5 +1,4 @@
 import React from 'react';
-import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,8 +12,7 @@ const App: React.FC = () => {
   return (
     <div className="bg-slate-900">
       <Header />
-      <main className="container mx-auto px-6 md:px-12 lg:px-20">
-        <Preloader />
+      <main className="container px-6 mx-auto md:px-12 lg:px-20">
         <Hero />
         <About />
         <Skills />
