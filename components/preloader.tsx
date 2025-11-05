@@ -4,15 +4,21 @@ import React, { useState, useEffect } from 'react';
 
 const Preloader: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3200); // Adjust duration as needed
+    }, 3200);
 
     return () => clearTimeout(timer);
   }, []);
 
+  // Don't render anything on server-side
+  if (!mounted) return null;
+
+  // After mounting, handle the preloader visibility
   if (!isLoading) return null;
 
   return (
