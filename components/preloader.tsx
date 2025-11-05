@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 
 const Preloader: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
