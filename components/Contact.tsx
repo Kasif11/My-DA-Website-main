@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
         I'm currently open to new opportunities and would love to chat. Whether you have a question or just want to say hi, feel free to reach out.
       </p>
       <a
-        href="mailto:kasif1196quamar@gmail.com"
+        href="https://wa.me/+919905034309"
         className="inline-block bg-sky-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-600 transition-colors duration-300"
       >
         Say Hello
