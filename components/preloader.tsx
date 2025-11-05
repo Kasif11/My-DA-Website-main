@@ -6,7 +6,7 @@ const Preloader: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // Adjust duration as needed
+    }, 3200); // Adjust duration as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -17,7 +17,7 @@ const Preloader: React.FC = () => {
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900">
       <div className="relative w-32 h-32">
         {/* Background blur effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-400/30 to-violet-600/30 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-400/30 to-violet-600/30 blur-2xl animate-pulse"></div>
         
         <svg 
           viewBox="0 0 100 100" 
