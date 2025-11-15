@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'E-commerce Sales Analysis',
     tech: 'MS Excel',
-    githubUrl: 'https://github.com/Kasif11',
+    githubUrl: 'https://github.com/Kasif11/E-Commerce-Sales-Analysis',
     description: [
       'Created an insightful dashboard for 2015 sales by analysing the growth trends of 4 product categories by using pivot table.',
       'Incorporated clustered column charts, bar charts, control combo box & data analysis add-in to accomplished top 8 products.',
