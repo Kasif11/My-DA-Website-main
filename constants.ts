@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Air Cargo Analysis',
     tech: 'SQL',
-    githubUrl: 'https://github.com/Kasif11',
+    githubUrl: 'https://github.com/Kasif11/Air-Cargo-Analysis',
     description: [
       'Leveraged airline dataset to optimize travel operations, analyse busiest routes, ticket sales, & enhance the booking experience; resulting in 23% increase in revenue collection & 13% reduction in customer complaints.',
     ],
@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Zomato Restaurant Analysis',
     tech: 'Power BI',
-    githubUrl: 'https://github.com/Kasif11',
+    githubUrl: 'https://github.com/Kasif11/Zomato-Restaurant-Analysis',
     description: [
       'Analysed dataset of 5000 restaurants in 15+ countries, which shows average rating of 2.9/5 & average cost 1.5K.',
       'Crafted Power BI reports for global analysis & restaurant performance by using Power Query, Charts and DAX for calculations.',
