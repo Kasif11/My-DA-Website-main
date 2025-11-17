@@ -142,7 +142,7 @@ const BlobBackground = styled.div`
   inset: 0;
   background: linear-gradient(135deg, #6a5acd, #00bfff);
   animation: ${morph} 3s ease-in-out infinite both alternate;
-  filter: blur(40px);
+  filter: blur(30px);
   z-index: 0;
 `;
 
@@ -248,6 +248,7 @@ const Hero: React.FC = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l4-4m-4 4l-4-4M21 21H3" />
               </svg>
+
               <span className="hidden sm:inline font-medium text-sm sm:text-base">Resume</span>
               <span className="w-2 h-2 bg-white/80 rounded-full ml-1 hidden sm:inline animate-pulse" />
             </a>
@@ -255,13 +256,14 @@ const Hero: React.FC = () => {
         </div>
 
         {/* 👇 Morphing blob background + Image */}
-        <div className="flex justify-center order-first md:order-last">
+        <div className="flex justify-center order-first md:order-last mt-14 md:mt-0">
+        {/* <div className="flex justify-center order-first md:order-last"> */}
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <BlobBackground />
             <img
               src={myImage}
               alt="Kasif Quamar"
-              className="relative w-full h-full object-cover rounded-full border-4 border-slate-700 shadow-2xl z-10"
+              className="relative w-full h-full object-cover rounded-full border-4 border-slate-500 shadow-2xl z-10 "
             />
           </div>
         </div>
