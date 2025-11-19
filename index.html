@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="assets/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Kasif Quamar | Data Analyst</title>
-    <meta name="description" content="Personal portfolio of Kasif Quamar, a skilled Data Analyst specializing in SQL, Power BI, and Python. Explore my projects, experience, and skills. Discover my projects and data-driven insights." />
-    <meta name="keywords" content="Kasif Quamar, Kasif Quamar Data Analyst, Kasif, Kasif Data Analyst, Kasif DA, Data Analyst Kasif, Data Analyst Kasif Quamar, Kasif Quamar Khizersarai, DA Kasif,  Data Analyst, Portfolio, SQL, Power BI, Python, Data Visualization, Business Intelligence, Data Science" />
-    <meta name="author" content="Kasif Quamar" />
-    <meta name="language" content="English" />
 
-    <!-- LinkedIn -->
-    <meta property="profile:first_name" content="Kasif" />
-    <meta property="profile:last_name" content="Quamar" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Kasif Quamar | Data Analyst Portfolio" />
-    <meta name="twitter:description" content="A personal portfolio website for Kasif Quamar, a Data Analyst." />
-    <meta name="twitter:image" content="assets/AboutImg.jpg" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="assets/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kasif Quamar | Data Analyst " />
-    <meta property="og:description" content="A personal portfolio website for Kasif Quamar, a Data Analyst. Explore my data analytics projects, skills in SQL, Power BI, Python, and professional experience in business intelligence." />
+  <!-- SEO Meta Tags -->
+  <title>Kasif Quamar | Data Analyst</title>
+  <meta name="description"
+    content="Personal portfolio of Kasif Quamar, a skilled Data Analyst specializing in SQL, Power BI, and Python. Explore my projects, experience, and skills. Discover my projects and data-driven insights." />
+  <meta name="keywords"
+    content="Kasif Quamar, Kasif Quamar Data Analyst, Kasif, Kasif Data Analyst, Kasif DA, Data Analyst Kasif, Data Analyst Kasif Quamar, Kasif Quamar Khizersarai, DA Kasif,  Data Analyst, Portfolio, SQL, Power BI, Python, Data Visualization, Business Intelligence, Data Science" />
+  <meta name="author" content="Kasif Quamar" />
+  <meta name="language" content="English" />
 
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* For scroll-in animations */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  <!-- LinkedIn -->
+  <meta property="profile:first_name" content="Kasif" />
+  <meta property="profile:last_name" content="Quamar" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kasif Quamar | Data Analyst Portfolio" />
+  <meta name="twitter:description" content="A personal portfolio website for Kasif Quamar, a Data Analyst." />
+  <meta name="twitter:image" content="assets/AboutImg.jpg" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kasif Quamar | Data Analyst " />
+  <meta property="og:description"
+    content="A personal portfolio website for Kasif Quamar, a Data Analyst. Explore my data analytics projects, skills in SQL, Power BI, Python, and professional experience in business intelligence." />
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* For scroll-in animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @keyframes tilt {
+
+      0%,
+      100% {
+        transform: rotate(0deg);
       }
-      .reveal-visible {
-        opacity: 1;
-        transform: translateY(0);
+
+      25% {
+        transform: rotate(-1.5deg);
       }
-      html {
-        scroll-behavior: smooth;
+
+      75% {
+        transform: rotate(1.5deg);
       }
-      body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      @keyframes tilt {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(-1.5deg); }
-        75% { transform: rotate(1.5deg); }
-      }
-      .animate-tilt {
-        animation: tilt 10s infinite linear;
-      }
-    </style>
+    }
+
+    .animate-tilt {
+      animation: tilt 10s infinite linear;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -68,8 +87,20 @@
   <meta name="google-site-verification" content="Qr7tUvlar26UGkU3MQESF9DKTKJj8sHY2V2aOCDdpQg" />
 </head>
 
-  <body class="bg-slate-900 text-slate-300">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body class="bg-slate-900 text-slate-300">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+  <script type="text/javascript">
+    atOptions = {
+      'key': '6f0ed109ab070fb4428cd1fd04cc3915',
+      'format': 'iframe',
+      'height': 300,
+      'width': 160,
+      'params': {}
+    };
+  </script>
+  <script type="text/javascript"
+    src="//www.highperformanceformat.com/6f0ed109ab070fb4428cd1fd04cc3915/invoke.js"></script>
+</body>
+
 </html>
