@@ -43,7 +43,7 @@
 
 import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import AboutImg from '../assets/AboutImg.jpg';
+import AboutImg from '../assets/my_transparent_image.png';
 
 const About: React.FC = () => {
   const sectionRef = useScrollAnimation<HTMLElement>();

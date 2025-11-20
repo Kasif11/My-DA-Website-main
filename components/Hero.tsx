@@ -3,7 +3,7 @@ import { GithubIcon } from './icons/GithubIcon';
 import { LinkedInIcon } from './icons/LinkedInIcon';
 import { MailIcon } from './icons/MailIcon';
 // @ts-ignore: static asset import without type declarations
-import myImage from '../assets/myImage.jpg';
+import myImage from '../assets/my_transparent_image.png';
 import MY_DA_Resume from '../assets/My_DA_Resume.pdf';
 
 // typing animation component
