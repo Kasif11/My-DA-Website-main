@@ -32,10 +32,10 @@ const Projects: React.FC = () => {
           100% { background-position: 200% center; }
         }
 
-        @keyframes project-lift {
-          0%, 100% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-8px) scale(1.02); }
-        }
+        // @keyframes project-lift {
+        //   0%, 100% { transform: translateY(0) scale(1); }
+        //   50% { transform: translateY(-8px) scale(1.02); }
+        // }
 
         @keyframes project-title-glow {
           0%, 100% {

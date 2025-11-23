@@ -10,10 +10,10 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" ref={sectionRef} className="text-center py-24 reveal">
       <style>{`
-        @keyframes rotate-border {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
+        // @keyframes rotate-border {
+        //   from { transform: rotate(0deg); }
+        //   to { transform: rotate(360deg); }
+        // }
 
         @keyframes contact-title-glow {
           0%, 100% {
@@ -28,16 +28,16 @@ const Contact: React.FC = () => {
           }
         }
 
-        @keyframes contact-text-pulse {
-          0%, 100% {
-            opacity: 0.8;
-            transform: translateY(0);
-          }
-          50% {
-            opacity: 1;
-            transform: translateY(-3px);
-          }
-        }
+        // @keyframes contact-text-pulse {
+        //   0%, 100% {
+        //     opacity: 0.8;
+        //     transform: translateY(0);
+        //   }
+        //   50% {
+        //     opacity: 1;
+        //     transform: translateY(-3px);
+        //   }
+        // }
 
         @keyframes button-glow {
           0%, 100% {
@@ -63,10 +63,10 @@ const Contact: React.FC = () => {
           50% { transform: translateY(-5px) scale(1.05); }
         }
 
-        @keyframes button-pulse {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.02); }
-        }
+        // @keyframes button-pulse {
+        //   0%, 100% { transform: scale(1); }
+        //   50% { transform: scale(1.02); }
+        // }
 
         @keyframes icon-float {
           0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -115,13 +115,13 @@ const Contact: React.FC = () => {
           color: white;
           font-weight: bold;
           padding: 0.75rem 1.5rem;
-          border-radius: 12px;
+          border-radius: 8px;
           cursor: pointer;
           overflow: hidden;
           z-index: 1;
           border: none;
           animation: button-glow 2.5s ease-in-out infinite,
-          button-bounce 2s ease-in-out infinite;
+          //button-bounce 2s ease-in-out infinite;
         }
 
         .contact-button::before {
@@ -175,8 +175,7 @@ const Contact: React.FC = () => {
 
         .social-icon {
           position: relative;
-          animation: icon-float 3s ease-in-out infinite,
-                     icon-glow 2.5s ease-in-out infinite;
+          animation: icon-glow 2.5s ease-in-out infinite;
         }
 
         .social-icon:nth-child(1) {

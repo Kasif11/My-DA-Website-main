@@ -266,16 +266,16 @@ const Hero: React.FC = () => {
         }
 
         .hero-greeting {
-          animation: greeting-pulse 2.5s ease-in-out infinite,
+          animation: 
                      greeting-glow 3s ease-in-out infinite;
         }
 
         .hero-description {
-          animation: description-fade 3s ease-in-out infinite;
+          animation: description-fade 3s infinite;
         }
 
         .hero-icon {
-          animation: icon-float 3s ease-in-out infinite,
+          animation: 
                      icon-glow 2.5s ease-in-out infinite;
         }
 
@@ -295,6 +295,7 @@ const Hero: React.FC = () => {
           animation: icon-float 1s ease-in-out infinite,
                      icon-glow 1s ease-in-out infinite,
                      icon-rotate 2s linear infinite;
+          color: #38bdf8 !important;
         }
 
         .hero-resume-button {
@@ -302,8 +303,7 @@ const Hero: React.FC = () => {
           background: linear-gradient(135deg, #38bdf8, #7c3aed);
           background-size: 200% 200%;
           overflow: hidden;
-          animation: button-glow 2.5s ease-in-out infinite,
-                     button-bounce 2s ease-in-out infinite;
+          animation: button-glow 2.5s ease-in-out infinite;
         }
 
         .hero-resume-button::before {

@@ -33,10 +33,10 @@ const Skills: React.FC = () => {
           100% { background-position: 200% center; }
         }
 
-        @keyframes skill-bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
-        }
+        // @keyframes skill-bounce {
+        //   0%, 100% { transform: translateY(0); }
+        //   50% { transform: translateY(-5px); }
+        // }
 
         @keyframes skill-scale {
           0%, 100% { transform: scale(1); }

@@ -32,10 +32,10 @@ const Education: React.FC = () => {
           100% { background-position: 200% center; }
         }
 
-        @keyframes edu-lift {
-          0%, 100% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-8px) scale(1.02); }
-        }
+        // @keyframes edu-lift {
+        //   0%, 100% { transform: translateY(0) scale(1); }
+        //   50% { transform: translateY(-8px) scale(1.02); }
+        // }
 
         @keyframes edu-pulse {
           0%, 100% { opacity: 1; }

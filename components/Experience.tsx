@@ -33,10 +33,10 @@ const Experience: React.FC = () => {
           100% { background-position: 200% center; }
         }
 
-        @keyframes exp-lift {
-          0%, 100% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-6px) scale(1.01); }
-        }
+        // @keyframes exp-lift {
+        //   0%, 100% { transform: translateY(0) scale(1); }
+        //   50% { transform: translateY(-6px) scale(1.01); }
+        // }
 
         @keyframes exp-title-glow {
           0%, 100% {

@@ -488,12 +488,11 @@ const Header: React.FC = () => {
 
         .mobile-nav-link {
           position: relative;
-          padding: 0.75rem 1.5rem;
+          padding: 0.5rem 1.25rem;
           transition: all 0.3s ease;
           width: 100%;
           text-align: center;
-          animation: mobile-nav-text-glow 3s ease-in-out infinite,
-                     mobile-nav-text-slide 2.5s ease-in-out infinite;
+          animation: mobile-nav-text-glow 3s ease-in-out infinite;
         }
 
         .mobile-nav-link::before {
@@ -530,7 +529,7 @@ const Header: React.FC = () => {
 
         .mobile-nav-link:hover {
           color: #38bdf8;
-          transform: translateX(5px);
+          transform: translateX(1px);
           text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
         }
 
@@ -557,7 +556,7 @@ const Header: React.FC = () => {
         <a 
           href="#home" 
           onClick={(e) => handleNavClick(e, '#home')} 
-          className="relative group w-16 h-16 flex items-center justify-center"
+          className="relative group w-16 h-14 flex items-center justify-center"
           aria-label="Home"
         >
           <style>{`
@@ -617,9 +616,9 @@ const Header: React.FC = () => {
               50% { opacity: 1; transform: scale(1.5) rotate(180deg); }
             }
 
-            .logo-animated {
-              animation: float-logo 5s ease-in-out infinite, glow-pulse 4s ease-in-out infinite;
-            }
+            // .logo-animated {
+            //   animation: float-logo 5s ease-in-out infinite, glow-pulse 4s ease-in-out infinite;
+            // }
 
             .orbit-ring {
               animation: orbit 10s linear infinite;
