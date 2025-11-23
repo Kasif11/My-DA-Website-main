@@ -174,34 +174,231 @@ const Hero: React.FC = () => {
         .rotating-border {
           animation: rotate-border 4s linear infinite;
         }
+
+        @keyframes icon-float {
+          0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+          25% { transform: translateY(-8px) rotate(5deg) scale(1.1); }
+          50% { transform: translateY(-12px) rotate(0deg) scale(1.15); }
+          75% { transform: translateY(-8px) rotate(-5deg) scale(1.1); }
+        }
+
+        @keyframes icon-glow {
+          0%, 100% {
+            filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.3));
+            color: rgb(148, 163, 184);
+          }
+          50% {
+            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.8))
+                    drop-shadow(0 0 25px rgba(124, 58, 237, 0.5));
+            color: #38bdf8;
+          }
+        }
+
+        @keyframes icon-rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        @keyframes greeting-pulse {
+          0%, 100% {
+            opacity: 0.8;
+            transform: translateY(0);
+          }
+          50% {
+            opacity: 1;
+            transform: translateY(-3px);
+          }
+        }
+
+        @keyframes greeting-glow {
+          0%, 100% {
+            color: #38bdf8;
+            text-shadow: 0 0 0px rgba(56, 189, 248, 0);
+          }
+          50% {
+            color: #7c3aed;
+            text-shadow: 0 0 10px rgba(124, 58, 237, 0.5),
+                         0 0 20px rgba(124, 58, 237, 0.3);
+          }
+        }
+
+        @keyframes description-fade {
+          0%, 100% {
+            opacity: 0.8;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes button-glow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4),
+                        0 0 40px rgba(56, 189, 248, 0.2),
+                        inset 0 0 20px rgba(56, 189, 248, 0.1);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.8),
+                        0 0 60px rgba(124, 58, 237, 0.5),
+                        0 0 90px rgba(244, 114, 182, 0.3),
+                        inset 0 0 30px rgba(56, 189, 248, 0.2);
+          }
+        }
+
+        @keyframes button-shimmer {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+
+        @keyframes button-bounce {
+          0%, 100% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-5px) scale(1.05); }
+        }
+
+        @keyframes button-pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+        }
+
+        @keyframes button-border-rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        .hero-greeting {
+          animation: greeting-pulse 2.5s ease-in-out infinite,
+                     greeting-glow 3s ease-in-out infinite;
+        }
+
+        .hero-description {
+          animation: description-fade 3s ease-in-out infinite;
+        }
+
+        .hero-icon {
+          animation: icon-float 3s ease-in-out infinite,
+                     icon-glow 2.5s ease-in-out infinite;
+        }
+
+        .hero-icon:nth-child(1) {
+          animation-delay: 0s;
+        }
+
+        .hero-icon:nth-child(2) {
+          animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+          animation-delay: 0.6s;
+        }
+
+        .hero-icon:hover {
+          animation: icon-float 1s ease-in-out infinite,
+                     icon-glow 1s ease-in-out infinite,
+                     icon-rotate 2s linear infinite;
+        }
+
+        .hero-resume-button {
+          position: relative;
+          background: linear-gradient(135deg, #38bdf8, #7c3aed);
+          background-size: 200% 200%;
+          overflow: hidden;
+          animation: button-glow 2.5s ease-in-out infinite,
+                     button-bounce 2s ease-in-out infinite;
+        }
+
+        .hero-resume-button::before {
+          content: '';
+          position: absolute;
+          inset: -2px;
+          border-radius: 8px;
+          padding: 2px;
+          background: conic-gradient(from 0deg, #38bdf8, #7c3aed, #f472b6, #7c3aed, #38bdf8);
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          opacity: 0.8;
+          z-index: -1;
+          animation: button-border-rotate 3s linear infinite;
+        }
+
+        .hero-resume-button::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, 
+            rgba(56, 189, 248, 0.2) 0%, 
+            rgba(124, 58, 237, 0.2) 50%, 
+            rgba(244, 114, 182, 0.2) 100%);
+          background-size: 200% 200%;
+          opacity: 1;
+          z-index: -1;
+          border-radius: 8px;
+          animation: button-shimmer 2s linear infinite;
+        }
+
+        .hero-resume-button:hover {
+          animation: button-glow 1.5s ease-in-out infinite,
+                     button-bounce 1s ease-in-out infinite,
+                     button-pulse 0.5s ease-in-out infinite;
+        }
+
+        .hero-resume-button:hover::before {
+          opacity: 1;
+        }
+
+        .hero-resume-button:active {
+          transform: translateY(2px) scale(0.98);
+        }
+
+        .hero-resume-button span,
+        .hero-resume-button svg {
+          position: relative;
+          z-index: 1;
+        }
       `}</style>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4 text-center md:text-left">
-          <p className="text-sky-400 text-lg">Hii, my name is</p>
+          <p className="hero-greeting text-lg">Hii, my name is</p>
 
           <TypingName />
 
           <TypingSkills />
           {/* <h2 className="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">I build insights from data.</h2> */}
-          <p className="max-w-xl text-slate-400 leading-relaxed mx-auto md:mx-0">
+          <p className="hero-description max-w-xl text-slate-400 leading-relaxed mx-auto md:mx-0">
             I'm a Data Analyst specializing in creating impactful dashboards and uncovering stories within data. My expertise lies in Excel, SQL, Power BI, and Python to drive business decisions.
           </p>
           <div className="flex items-center justify-center md:justify-start space-x-6 pt-4">
-            <a href="https://github.com/Kasif11" target="_blank" rel="noopener noreferrer" aria-label="Github" className="text-slate-400 hover:text-sky-400 transition-colors duration-300 transform hover:scale-110">
+            <a 
+              href="https://github.com/Kasif11" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Github" 
+              className="hero-icon text-slate-400 transition-colors duration-300"
+            >
               <GithubIcon className="w-7 h-7" />
             </a>
-            <a href="https://www.linkedin.com/in/kasif-quamar-023b7223b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-400 hover:text-sky-400 transition-colors duration-300 transform hover:scale-110">
+            <a 
+              href="https://www.linkedin.com/in/kasif-quamar-023b7223b" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="LinkedIn" 
+              className="hero-icon text-slate-400 transition-colors duration-300"
+            >
               <LinkedInIcon className="w-7 h-7" />
             </a>
-            <a href="mailto:kasif1196quamar@gmail.com" aria-label="Email" className="text-slate-400 hover:text-sky-400 transition-colors duration-300 transform hover:scale-110">
+            <a 
+              href="mailto:kasif1196quamar@gmail.com" 
+              aria-label="Email" 
+              className="hero-icon text-slate-400 transition-colors duration-300"
+            >
               <MailIcon className="w-7 h-7" />
             </a>
 
             <a
               href={MY_DA_Resume}
               download="Kasif_Quamar_Resume.pdf"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 to-violet-600 text-white px-4 py-2 rounded-md shadow-lg hover:scale-105 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-sky-400 whitespace-nowrap"
+              className="hero-resume-button inline-flex items-center justify-center gap-2 text-white px-4 py-2 rounded-md shadow-lg transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-sky-400 whitespace-nowrap"
               aria-label="Download Resume"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0 transform transition-transform duration-200 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">

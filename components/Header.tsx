@@ -333,10 +333,44 @@ const Header: React.FC = () => {
           50% { transform: translateY(-3px); }
         }
 
+        @keyframes nav-text-glow {
+          0%, 100% {
+            color: rgb(203, 213, 225);
+            text-shadow: 0 0 0px rgba(56, 189, 248, 0);
+          }
+          50% {
+            color: rgba(56, 189, 248, 0.8);
+            text-shadow: 0 0 8px rgba(56, 189, 248, 0.4),
+                         0 0 15px rgba(56, 189, 248, 0.2);
+          }
+        }
+
+        @keyframes nav-text-pulse {
+          0%, 100% { 
+            transform: scale(1);
+            opacity: 1;
+          }
+          50% { 
+            transform: scale(1.05);
+            opacity: 0.9;
+          }
+        }
+
+        @keyframes nav-text-shimmer {
+          0% {
+            background-position: -200% center;
+          }
+          100% {
+            background-position: 200% center;
+          }
+        }
+
         .nav-link {
           position: relative;
           padding: 0.5rem 1rem;
           transition: all 0.3s ease;
+          animation: nav-text-glow 3s ease-in-out infinite,
+                     nav-text-pulse 2.5s ease-in-out infinite;
         }
 
         .nav-link::before {
@@ -381,7 +415,10 @@ const Header: React.FC = () => {
           transform: translateY(-2px);
           text-shadow: 0 0 10px rgba(56, 189, 248, 0.5),
                        0 0 20px rgba(56, 189, 248, 0.3);
-          animation: nav-glow 2s ease-in-out infinite, nav-bounce 1s ease-in-out infinite;
+          animation: nav-glow 2s ease-in-out infinite, 
+                     nav-bounce 1s ease-in-out infinite,
+                     nav-text-glow 1.5s ease-in-out infinite,
+                     nav-text-pulse 1s ease-in-out infinite;
         }
 
         .nav-link:active {
@@ -428,12 +465,35 @@ const Header: React.FC = () => {
           border-radius: 50% 50% 0 0;
         }
 
+        @keyframes mobile-nav-text-glow {
+          0%, 100% {
+            color: rgb(203, 213, 225);
+            text-shadow: 0 0 0px rgba(56, 189, 248, 0);
+          }
+          50% {
+            color: rgba(56, 189, 248, 0.8);
+            text-shadow: 0 0 8px rgba(56, 189, 248, 0.4),
+                         0 0 15px rgba(56, 189, 248, 0.2);
+          }
+        }
+
+        @keyframes mobile-nav-text-slide {
+          0%, 100% { 
+            transform: translateX(0);
+          }
+          50% { 
+            transform: translateX(3px);
+          }
+        }
+
         .mobile-nav-link {
           position: relative;
           padding: 0.75rem 1.5rem;
           transition: all 0.3s ease;
           width: 100%;
           text-align: center;
+          animation: mobile-nav-text-glow 3s ease-in-out infinite,
+                     mobile-nav-text-slide 2.5s ease-in-out infinite;
         }
 
         .mobile-nav-link::before {
@@ -797,12 +857,15 @@ const Header: React.FC = () => {
         </a>
 
         <nav className="hidden md:flex space-x-6">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className="nav-link cursor-pointer text-slate-300 font-medium relative z-10"
+              style={{ 
+                animationDelay: `${index * 0.2}s, ${index * 0.3}s`
+              } as React.CSSProperties}
             >
               {link.label}
             </a>
@@ -819,12 +882,15 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-slate-900/90 backdrop-blur-sm">
           <nav className="flex flex-col items-center py-4">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className="mobile-nav-link cursor-pointer text-slate-300 font-medium relative"
+                style={{ 
+                  animationDelay: `${index * 0.15}s, ${index * 0.2}s`
+                } as React.CSSProperties}
               >
                 {link.label}
               </a>
