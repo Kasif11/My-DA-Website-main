@@ -213,7 +213,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-end order-first md:order-last">
+        <div className="flex justify-center order-first md:order-last">
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             {/* Outer glow background */}
             <div className="absolute inset-0 bg-gradient-to-br from-sky-400/30 via-violet-500/20 to-sky-400/30 rounded-full blur-3xl animate-pulse"></div>
