@@ -68,13 +68,13 @@ export const EDUCATION: EducationItem[] = [
         percentage: '72.58%',
     },
     {
-        degree: 'Senior Secondary ( XII )',
+        degree: 'Senior Secondary (XII)',
         institution: 'J.J College, Gaya',
         period: '04/2020 - 03/2022',
         percentage: '75%',
     },
     {
-        degree: 'Secondary ( X )',
+        degree: 'Secondary (X)',
         institution: 'Manas Bhumi Sr Sec Schl Dinkar Ngr Nalanda Br',
         period: '04/2019 - 07/2020',
         percentage: '76.4%',

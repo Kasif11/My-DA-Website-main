@@ -51,7 +51,7 @@ const TypingName: React.FC<{ texts?: string[] }> = ({ texts = ['Kasif Quamar'] }
 };
 
 // typing skills animation component
-const TypingSkills: React.FC<{ texts?: string[] }> = ({ texts = ['I build insights from data.',"I'm a Data Analyst.","I'm a Programmer.","I'm a Coder."] }) => {
+const TypingSkills: React.FC<{ texts?: string[] }> = ({ texts = ["I'm a Data Analyst.","I build insights from data.","I turn data into decisions.","I transform raw data into insights.","I uncover patterns hidden in data."] }) => {
   const [index, setIndex] = useState(0);
   const [display, setDisplay] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);

@@ -21,7 +21,7 @@ const Education: React.FC = () => {
               </div>
               <div className="text-right mt-2 sm:mt-0">
                  <p className="text-sm text-slate-400">{edu.period}</p>
-                 <p className="text-sm text-sky-400">Percentage: {edu.percentage}</p>
+                 <p className="text-sm text-sky-400">%age: {edu.percentage}</p>
               </div>
             </div>
           </div>
