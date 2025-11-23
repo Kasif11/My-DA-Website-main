@@ -43,6 +43,18 @@ const Skills: React.FC = () => {
           50% { transform: scale(1.05); }
         }
 
+        @keyframes skill-text-glow {
+          0%, 100% {
+            color: rgb(203, 213, 225);
+            text-shadow: 0 0 0px rgba(56, 189, 248, 0);
+          }
+          50% {
+            color: #38bdf8;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5),
+                         0 0 20px rgba(56, 189, 248, 0.3);
+          }
+        }
+
         .skill-item {
           position: relative;
           background: rgba(30, 41, 59, 0.5);
@@ -52,9 +64,12 @@ const Skills: React.FC = () => {
           text-align: center;
           color: rgb(203, 213, 225);
           cursor: default;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           overflow: hidden;
           z-index: 1;
+          border-color: transparent;
+          animation: fadeInUp 0.6s ease-out backwards,
+                     skill-glow 3s ease-in-out infinite,
+                     skill-bounce 2.5s ease-in-out infinite;
         }
 
         .skill-item::before {
@@ -67,8 +82,7 @@ const Skills: React.FC = () => {
           -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
-          opacity: 0;
-          transition: opacity 0.4s ease;
+          opacity: 0.6;
           z-index: -1;
           animation: rotate-border 3s linear infinite;
         }
@@ -82,28 +96,19 @@ const Skills: React.FC = () => {
             rgba(124, 58, 237, 0.1) 50%, 
             rgba(244, 114, 182, 0.1) 100%);
           background-size: 200% 200%;
-          opacity: 0;
-          transition: opacity 0.4s ease;
+          opacity: 1;
           z-index: -1;
           border-radius: 12px;
+          animation: skill-shimmer 3s linear infinite;
         }
 
         .skill-item:hover::before {
           opacity: 1;
         }
 
-        .skill-item:hover::after {
-          opacity: 1;
-          animation: skill-shimmer 2s linear infinite;
-        }
-
         .skill-item:hover {
-          color: #38bdf8;
-          transform: translateY(-8px) scale(1.03);
-          border-color: transparent;
-          animation: skill-glow 2s ease-in-out infinite, skill-bounce 1.5s ease-in-out infinite;
-          text-shadow: 0 0 10px rgba(56, 189, 248, 0.5),
-                       0 0 20px rgba(56, 189, 248, 0.3);
+          animation: skill-glow 2s ease-in-out infinite,
+                     skill-bounce 1.5s ease-in-out infinite;
         }
 
         .skill-item:active {
@@ -114,16 +119,11 @@ const Skills: React.FC = () => {
           position: relative;
           z-index: 1;
           font-weight: 500;
-          transition: all 0.3s ease;
+          animation: skill-text-glow 3s ease-in-out infinite;
         }
 
         .skill-item:hover .skill-content {
-          transform: scale(1.05);
-        }
-
-        /* Stagger animation for items */
-        .skill-item {
-          animation: fadeInUp 0.6s ease-out backwards;
+          animation: skill-text-glow 1.5s ease-in-out infinite;
         }
 
         @keyframes fadeInUp {
@@ -146,9 +146,19 @@ const Skills: React.FC = () => {
           <li
             key={index}
             className="skill-item"
-            style={{ animationDelay: `${index * 0.1}s` }}
+            style={{ 
+              '--glow-delay': `${index * 0.2}s`,
+              '--bounce-delay': `${index * 0.3}s`,
+              '--text-delay': `${index * 0.15}s`,
+              animationDelay: `${index * 0.1}s, var(--glow-delay), var(--bounce-delay)`
+            } as React.CSSProperties}
           >
-            <span className="skill-content">{skill.name}</span>
+            <span 
+              className="skill-content"
+              style={{ animationDelay: `var(--text-delay)` } as React.CSSProperties}
+            >
+              {skill.name}
+            </span>
           </li>
         ))}
       </ul>
