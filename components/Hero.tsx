@@ -50,6 +50,50 @@ const TypingName: React.FC<{ texts?: string[] }> = ({ texts = ['Kasif Quamar'] }
   );
 };
 
+// typing skills animation component
+const TypingSkills: React.FC<{ texts?: string[] }> = ({ texts = ['I build insights from data.',"I'm a Data Analyst.","I'm a Programmer.","I'm a Coder."] }) => {
+  const [index, setIndex] = useState(0);
+  const [display, setDisplay] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const fullText = texts[index];
+    let timeout = 0;
+
+    if (!isDeleting) {
+      if (display !== fullText) {
+        timeout = 120; // typing speed (ms per char)
+        const t = window.setTimeout(() => setDisplay(fullText.slice(0, display.length + 1)), timeout);
+        return () => clearTimeout(t);
+      } else {
+        // pause at full text
+        const t = window.setTimeout(() => setIsDeleting(true), 1000); // 1s pause
+        return () => clearTimeout(t);
+      }
+    } else {
+      if (display !== '') {
+        timeout = 60; // deleting speed
+        const t = window.setTimeout(() => setDisplay(fullText.slice(0, display.length - 1)), timeout);
+        return () => clearTimeout(t);
+      } else {
+        // move to next text
+        const t = window.setTimeout(() => {
+          setIsDeleting(false);
+          setIndex((i) => (i + 1) % texts.length);
+        }, 120);
+        return () => clearTimeout(t);
+      }
+    }
+  }, [display, isDeleting, index, texts]);
+
+  return (
+    <h2 className="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">
+      {display}
+      <span className="inline-block w-1 h-6 bg-sky-400 ml-2 align-middle animate-pulse" />
+    </h2>
+  );
+};
+
 const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center">
@@ -138,7 +182,8 @@ const Hero: React.FC = () => {
 
           <TypingName />
 
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">I build insights from data.</h2>
+          <TypingSkills />
+          {/* <h2 className="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">I build insights from data.</h2> */}
           <p className="max-w-xl text-slate-400 leading-relaxed mx-auto md:mx-0">
             I'm a Data Analyst specializing in creating impactful dashboards and uncovering stories within data. My expertise lies in Excel, SQL, Power BI, and Python to drive business decisions.
           </p>
