@@ -216,7 +216,7 @@ const About: React.FC = () => {
             }}></div>
 
             {/* Rotating frame 1 - outer ring */}
-            <svg
+            {/* <svg
               className="absolute inset-0 w-full h-full pointer-events-none about-frame-1 rounded-2xl"
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
@@ -241,10 +241,10 @@ const About: React.FC = () => {
                 strokeDasharray="8 4"
                 opacity="0.8"
               />
-            </svg>
+            </svg> */}
 
             {/* Rotating frame 2 - middle ring (reverse) */}
-            <svg
+            {/* <svg
               className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] pointer-events-none about-frame-2"
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +269,7 @@ const About: React.FC = () => {
                 strokeDasharray="6 5"
                 opacity="0.7"
               />
-            </svg>
+            </svg> */}
 
             {/* Main morphing image container with blinking effect */}
             <div className="absolute inset-4 md:inset-5 rounded-lg overflow-hidden">
@@ -291,13 +291,13 @@ const About: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               style={{ overflow: 'visible' }}
             >
-              <defs>
+              {/* <defs>
                 <linearGradient id="grad-about-3" x1="0%" y1="100%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="#7c3aed" />
                   <stop offset="50%" stopColor="#38bdf8" />
                   <stop offset="100%" stopColor="#f472b6" />
                 </linearGradient>
-              </defs>
+              </defs> */}
               <rect
                 x="6"
                 y="6"

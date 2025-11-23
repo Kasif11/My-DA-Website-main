@@ -669,7 +669,7 @@ const Header: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-violet-500/20 rounded-xl blur-2xl group-hover:from-sky-400/40 group-hover:to-violet-500/40 transition-all duration-500"></div>
 
           {/* Rotating border */}
-          <div className="absolute inset-0 rounded-xl overflow-hidden logo-rotating-border">
+          {/* <div className="absolute inset-0 rounded-xl overflow-hidden logo-rotating-border">
             <div className="absolute inset-0" style={{
               background: 'conic-gradient(from 0deg, #38bdf8, #7c3aed, #f472b6, #7c3aed, #38bdf8)',
               padding: '2px',
@@ -677,7 +677,7 @@ const Header: React.FC = () => {
               WebkitMaskComposite: 'xor',
               maskComposite: 'exclude',
             }}></div>
-          </div>
+          </div> */}
 
           {/* Shimmer effect */}
           <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none">

@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
           z-index: 1;
           border: none;
           animation: button-glow 2.5s ease-in-out infinite,
-                     button-bounce 2s ease-in-out infinite;
+          button-bounce 2s ease-in-out infinite;
         }
 
         .contact-button::before {
@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
           inset: -2px;
           border-radius: 12px;
           padding: 2px;
-          background: conic-gradient(from 0deg, #38bdf8, #7c3aed, #f472b6, #7c3aed, #38bdf8);
+          //background: conic-gradient(from 0deg, #38bdf8, #7c3aed, #f472b6, #7c3aed, #38bdf8);
           -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
