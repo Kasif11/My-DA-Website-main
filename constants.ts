@@ -2,8 +2,8 @@ import { Skill, ExperienceItem, Project, EducationItem } from './types';
 
 export const SKILLS: Skill[] = [
   { name: 'Advanced Excel (Pivot Tables, Power Query, Power Pivot)' },
-  { name: 'MySQL' },
   { name: 'Python (Pandas, NumPy, Matplotlib, Seaborn)' },
+  { name: 'MySQL' },
   { name: 'Power BI Desktop' },
   { name: 'Git/GitHub' },
   { name: 'Google Sheets' },
