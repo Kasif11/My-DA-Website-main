@@ -62,7 +62,7 @@ const TypingSkills: React.FC<{ texts?: string[] }> = ({ texts = ["I'm a Data Ana
 
     if (!isDeleting) {
       if (display !== fullText) {
-        timeout = 120; // typing speed (ms per char)
+        timeout = 160; // typing speed (ms per char)
         const t = window.setTimeout(() => setDisplay(fullText.slice(0, display.length + 1)), timeout);
         return () => clearTimeout(t);
       } else {
@@ -72,7 +72,7 @@ const TypingSkills: React.FC<{ texts?: string[] }> = ({ texts = ["I'm a Data Ana
       }
     } else {
       if (display !== '') {
-        timeout = 60; // deleting speed
+        timeout = 100; // deleting speed
         const t = window.setTimeout(() => setDisplay(fullText.slice(0, display.length - 1)), timeout);
         return () => clearTimeout(t);
       } else {
@@ -80,7 +80,7 @@ const TypingSkills: React.FC<{ texts?: string[] }> = ({ texts = ["I'm a Data Ana
         const t = window.setTimeout(() => {
           setIsDeleting(false);
           setIndex((i) => (i + 1) % texts.length);
-        }, 120);
+        }, 160);
         return () => clearTimeout(t);
       }
     }
