@@ -1,18 +1,20 @@
 import { Skill, ExperienceItem, Project, EducationItem } from './types';
 
 export const SKILLS: Skill[] = [
-  { name: 'Advanced Excel' },
-  { name: 'Power BI Desktop' },
+  { name: 'Advanced Excel (Pivot Tables, Power Query, Power Pivot)' },
   { name: 'MySQL' },
-  { name: 'Python' },
+  { name: 'Python (Pandas, NumPy, Matplotlib, Seaborn)' },
+  { name: 'Power BI Desktop' },
+  { name: 'Git/GitHub' },
+  { name: 'Google Sheets' },
+  { name: 'Data Analysis & Manipulation' },
+  { name: 'Statistics & Analytics' },
+  { name: 'Business Intelligence & Reporting' },
+  { name: 'Data Cleaning & Preparation' },
   { name: 'Data Visualization' },
-  { name: 'Data Cleaning' },
-  { name: 'Data Modelling' },
-  { name: 'Data Storytelling' },
-  { name: 'DAX' },
+  { name: 'Google Ads' },
   { name: 'HTML' },
   { name: 'CSS' },
-  { name: 'Tailwind CSS' },
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
