@@ -4,7 +4,7 @@ import { LinkedInIcon } from './icons/LinkedInIcon';
 import { MailIcon } from './icons/MailIcon';
 // @ts-ignore: static asset import without type declarations
 import myImage from '../assets/my_transparent_image.png';
-import MY_DA_Resume from '../assets/My_DA_Resume.pdf';
+import Resume from '../assets/My_New_DA_Resume.pdf';
 
 // typing animation component
 const TypingName: React.FC<{ texts?: string[] }> = ({ texts = ['Kasif Quamar'] }) => {
@@ -396,7 +396,7 @@ const Hero: React.FC = () => {
             </a>
 
             <a
-              href={MY_DA_Resume}
+              href={Resume}
               download="Kasif_Quamar_Resume.pdf"
               className="hero-resume-button inline-flex items-center justify-center gap-2 text-white px-4 py-2 rounded-md shadow-lg transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-sky-400 whitespace-nowrap"
               aria-label="Download Resume"

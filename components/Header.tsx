@@ -416,7 +416,7 @@ const Header: React.FC = () => {
           text-shadow: 0 0 10px rgba(56, 189, 248, 0.5),
                        0 0 20px rgba(56, 189, 248, 0.3);
           animation: nav-glow 2s ease-in-out infinite, 
-                     nav-bounce 1s ease-in-out infinite,
+                    //  nav-bounce 1s ease-in-out infinite,
                      nav-text-glow 1.5s ease-in-out infinite,
                      nav-text-pulse 1s ease-in-out infinite;
         }
