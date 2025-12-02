@@ -43,7 +43,7 @@ const TypingName: React.FC<{ texts?: string[] }> = ({ texts = ['Kasif Quamar'] }
   }, [display, isDeleting, index, texts]);
 
   return (
-    <h1 className="text-5xl md:text-7xl font-extrabold text-slate-100 tracking-tight">
+    <h1 className="text-4xl md:text-6xl font-extrabold text-slate-100 tracking-tight">
       {display}
       <span className="inline-block w-1 h-6 bg-sky-400 ml-2 align-middle animate-pulse" />
     </h1>
@@ -87,7 +87,7 @@ const TypingSkills: React.FC<{ texts?: string[] }> = ({ texts = ["I'm a Data Ana
   }, [display, isDeleting, index, texts]);
 
   return (
-    <h2 className="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">
+    <h2 className="text-3xl md:text-5xl font-bold text-slate-400 tracking-tight">
       {display}
       <span className="inline-block w-1 h-6 bg-sky-400 ml-2 align-middle animate-pulse" />
     </h2>
@@ -338,7 +338,7 @@ const Hero: React.FC = () => {
 
         .hero-resume-button:hover {
           animation: button-glow 1.5s ease-in-out infinite,
-                     button-bounce 1s ease-in-out infinite,
+                    //  button-bounce 1s ease-in-out infinite,
                      button-pulse 0.5s ease-in-out infinite;
         }
 
@@ -348,6 +348,8 @@ const Hero: React.FC = () => {
 
         .hero-resume-button:active {
           transform: translateY(2px) scale(0.98);
+          background: transparent;
+          // animation: none;
         }
 
         .hero-resume-button span,

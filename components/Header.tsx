@@ -367,10 +367,9 @@ const Header: React.FC = () => {
 
         .nav-link {
           position: relative;
-          padding: 0.5rem 1rem;
+          padding: 0.25rem 0.75rem;
           transition: all 0.3s ease;
-          animation: nav-text-glow 3s ease-in-out infinite,
-                     nav-text-pulse 2.5s ease-in-out infinite;
+          animation: nav-text-glow 3s ease-in-out infinite;
         }
 
         .nav-link::before {
@@ -417,8 +416,7 @@ const Header: React.FC = () => {
                        0 0 20px rgba(56, 189, 248, 0.3);
           animation: nav-glow 2s ease-in-out infinite, 
                     //  nav-bounce 1s ease-in-out infinite,
-                     nav-text-glow 1.5s ease-in-out infinite,
-                     nav-text-pulse 1s ease-in-out infinite;
+                    nav-text-glow 1.5s ease-in-out infinite;
         }
 
         .nav-link:active {

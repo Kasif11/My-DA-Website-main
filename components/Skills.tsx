@@ -68,8 +68,7 @@ const Skills: React.FC = () => {
           z-index: 1;
           border-color: transparent;
           animation: fadeInUp 0.6s ease-out backwards,
-                     skill-glow 3s ease-in-out infinite,
-                     skill-bounce 2.5s ease-in-out infinite;
+                     skill-glow 3s ease-in-out infinite;
         }
 
         .skill-item::before {
@@ -107,8 +106,7 @@ const Skills: React.FC = () => {
         }
 
         .skill-item:hover {
-          animation: skill-glow 2s ease-in-out infinite,
-                     skill-bounce 1.5s ease-in-out infinite;
+          animation: skill-glow 2s ease-in-out infinite;
         }
 
         .skill-item:active {

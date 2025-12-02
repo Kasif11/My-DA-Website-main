@@ -171,11 +171,11 @@ const Education: React.FC = () => {
 
         @keyframes edu-percentage-pulse {
           0%, 100% {
-            transform: scale(1);
+            // transform: scale(1);
             text-shadow: 0 0 0px rgba(124, 58, 237, 0);
           }
           50% {
-            transform: scale(1.05);
+            // transform: scale(1.05);
             text-shadow: 0 0 8px rgba(124, 58, 237, 0.4),
                          0 0 15px rgba(124, 58, 237, 0.2);
           }
@@ -188,7 +188,7 @@ const Education: React.FC = () => {
           width: 40px;
           height: 40px;
           opacity: 0.3;
-          animation: icon-float 2.5s ease-in-out infinite;
+          // animation: icon-float 2.5s ease-in-out infinite;
         }
       `}</style>
       <h2 className="text-3xl font-bold text-slate-100 mb-8 flex items-center">

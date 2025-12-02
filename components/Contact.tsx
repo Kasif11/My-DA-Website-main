@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
           z-index: 1;
           border: none;
           animation: button-glow 2.5s ease-in-out infinite,
-          //button-bounce 2s ease-in-out infinite;
+          // button-bounce 2s ease-in-out infinite;
         }
 
         .contact-button::before {
@@ -147,7 +147,6 @@ const Contact: React.FC = () => {
             rgba(56, 189, 248, 0.2) 0%, 
             rgba(124, 58, 237, 0.2) 50%, 
             rgba(244, 114, 182, 0.2) 100%);
-          background-size: 200% 200%;
           opacity: 1;
           z-index: -1;
           border-radius: 12px;
@@ -155,9 +154,7 @@ const Contact: React.FC = () => {
         }
 
         .contact-button:hover {
-          animation: button-glow 1.5s ease-in-out infinite,
-                     button-bounce 1s ease-in-out infinite,
-                     button-pulse 0.5s ease-in-out infinite;
+          animation: button-glow 1.5s ease-in-out infinite;
         }
 
         .contact-button:hover::before {
@@ -245,7 +242,7 @@ const Contact: React.FC = () => {
         </div>
       <footer className="footer-text mt-20 text-slate-500 text-sm">
         <p>
-          Made with <span className="heart-icon" aria-hidden="true">❤️</span> by Kasif Quamar.
+          Made with <span className="heart-icon" aria-hidden="true">❤️</span> by <a href="https://www.linkedin.com/in/kasif-quamar-023b7223b" className='contact-text max-w-xl mx-auto text-slate-400 mb-4 font-bold '>Kasif Quamar.</a>
           <br />
           © {new Date().getFullYear()} | All rights reserved.
         </p>
